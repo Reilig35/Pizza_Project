@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-IE">
     <head>
-        <title>Pizza Drill Demo</title>
+        <title>Pizza Menu</title>
         <meta http-equiv="Content-type" content="text/html"; charset="utf=8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <script src="./Pizza_Javascript/Pizza.js" type="text/javascript" defer></script>
@@ -10,11 +10,10 @@
     <body>
         <div id="menuBG">
             <h1>Pizza Menu</h1>
-            <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
             <form id="frmMenu">
                 
                 <!--Select Size of Pizza/ Left Column START-->
-                <div class="menu size">
+                <div class="menu left">
                     <h3>Size:</h3>
                     <input class="size" type="radio" name="Size" value="Single Slice">Single Slice<br>
                     <input class="size" type="radio" name="Size" value="Personal Pizza">Personal Pizza<br>
@@ -25,18 +24,18 @@
                 <!--Select Size of Pizza END-->
 
                 <!--Select Vegetable START-->
-                <div class="menu veg">
+                <div class="menu center">
                     <h3>Vegetables:</h3>
-                    <input class="Vegetables" type="checkbox" name="Vegetables" value="Onions">Onions<br>
-                    <input class="Vegetables" type="checkbox" name="Vegetables" value="Peppers">Peppers<br>
-                    <input class="Vegetables" type="checkbox" name="Vegetables" value="Tomatoes">Tomatoes<br>
-                    <input class="Vegetables" type="checkbox" name="Vegetables" value="Mushrooms">Mushrooms<br>
-                    <input class="Vegetables" type="checkbox" name="Vegetables" value="Olives">Olives<br>
+                    <input class="toppings" type="checkbox" name="Vegetables" value="Onions">Onions<br>
+                    <input class="toppings" type="checkbox" name="Vegetables" value="Peppers">Peppers<br>
+                    <input class="toppings" type="checkbox" name="Vegetables" value="Tomatoes">Tomatoes<br>
+                    <input class="toppings" type="checkbox" name="Vegetables" value="Mushrooms">Mushrooms<br>
+                    <input class="toppings" type="checkbox" name="Vegetables" value="Olives">Olives<br>
                 </div>
                 <!--Select Vegetable END-->
                 
                 <!--Select Topping START/Right Column-->
-                <div class="menu meats">
+                <div class="menu right">
                     <h3>Meats:</h3>
                     <input class="toppings" type="checkbox" name="Topping" value="Pepperoni">Pepperoni<br>
                     <input class="toppings" type="checkbox" name="Topping" value="Sausage">Sausage<br>
@@ -47,6 +46,8 @@
                     <input class="toppings" type="checkbox" name="Topping" value="Turkey">Turkey<br>
                 </div>
                 <!--Select Topping END-->
+
+                <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
 
                 <!--Shopping Cart Start-->
                 <div id="cart">
