@@ -1,0 +1,67 @@
+#menuBG {
+    width: 600px;
+    height: 470px;
+    margin: 10px auto;
+    
+    background-size: auto;
+    background-repeat: no-repeat;
+    
+}
+
+#menuBG h1 {
+    margin-left: 100px;
+}
+
+#frmMenu {
+    width: 400px;
+    height: 200px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+#menuBG:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.portion {
+    width: 33.3%;
+    height: 200px;
+    float: left;
+    background-color: lightgreen;
+}
+
+.meats {
+    width: 33.3%;
+    height: 200px;
+    float: left;
+}
+
+.veg {
+    width: 33.3%;
+    height: 200px;
+    float: left;
+}
+
+#showtext {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    top: 0; margin: 0px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+}
