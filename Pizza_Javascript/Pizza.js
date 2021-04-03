@@ -1,8 +1,15 @@
+/*Writer: William Twomey
+Project: Pizza Menu*/
+
+//Getting the size of the pizza
 function getReceipt() {
+    //Setting the vareables needed
     var text1 = "<h3>You Ordered:</h3>";
     var runningTotal = 0;
     var sizeTotal = 0;
     var sizeArray = document.getElementsByClassName("size")
+
+    //For Loop 
     for (var i = 0; i < sizeArray.length; i++) {
         if (sizeArray[i].checked) {
             var selectedSize = sizeArray[i].value;
@@ -20,17 +27,19 @@ function getReceipt() {
     } else if (selectedSize === "XL Pizza") {
         sizeTotal = 14;
     }
-
+    
+    //Console Log to check the code is working
     runningTotal = sizeTotal;
-    console.log(selectedSize + " = €" + sizeTotal + ".00");
+    console.log(selectedSize + " = &euro;" + sizeTotal + ".00");
     console.log("size text1:" + text1);
-    console.log("subtotal: €" + runningTotal + ".00")
+    console.log("subtotal: &euro;" + runningTotal + ".00")
+    //variables to be passed to the next function
     getTopping(runningTotal, text1);
 };
 
 
 
-
+//Function to get the toppings
 function getTopping(runningTotal, text1) {
     var toppingTotal = 0;
     var selectedTopping = [];
@@ -51,9 +60,9 @@ function getTopping(runningTotal, text1) {
     }
     runningTotal = (runningTotal + toppingTotal);
     console.log("total selected topping items: " + toppingCount);
-    console.log(toppingCount + " topping - 1 free topping = " + "€" + toppingTotal + ".00");
-    console.log("topping Vegetables text1: " + text1);
-    console.log("Purchase Total: " + "€" + runningTotal + ".00");
+    console.log(toppingCount + " topping - 1 free topping = " + "&euro;" + toppingTotal + ".00");
+    console.log("topping text1: " + text1);
+    console.log("Purchase Total: " + "&euro;" + runningTotal + ".00");
     document.getElementById("showText").innerHTML = text1;
-    document.getElementById("totalPrice").innerHTML = "<h3>Total: €" + runningTotal + ".00" + "</h3>"
+    document.getElementById("totalPrice").innerHTML = "<h3>Total: &euro;" + runningTotal + ".00" + "</h3>"
 }
